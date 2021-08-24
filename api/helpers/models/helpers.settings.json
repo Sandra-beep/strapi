@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "helpers",
+  "info": {
+    "name": "Helpers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "maxLength": 75
+    },
+    "profile_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "language": {
+      "type": "text"
+    },
+    "bookings": {
+      "via": "helper_id",
+      "collection": "bookings"
+    },
+    "date_time": {
+      "type": "datetime"
+    },
+    "user_id": {
+      "via": "helper_id",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}
