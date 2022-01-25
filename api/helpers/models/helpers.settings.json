@@ -38,11 +38,6 @@
     "date_time": {
       "type": "datetime"
     },
-    "user_id": {
-      "via": "helper_id",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "first_name": {
       "type": "string"
     },
@@ -51,6 +46,14 @@
     },
     "price": {
       "type": "integer"
+    },
+    "userID": {
+      "type": "integer"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "helpers"
     }
   }
 }

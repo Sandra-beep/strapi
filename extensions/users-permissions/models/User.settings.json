@@ -69,12 +69,12 @@
       "via": "user_id",
       "collection": "bookings"
     },
-    "helper_id": {
-      "via": "user_id",
-      "model": "helpers"
-    },
     "IsAdmin": {
       "type": "boolean"
+    },
+    "helpers": {
+      "via": "user",
+      "collection": "helpers"
     }
   }
 }
